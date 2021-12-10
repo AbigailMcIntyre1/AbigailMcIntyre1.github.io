@@ -1,0 +1,297 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* parent flex container for the top */
+.topcontainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: none;
+  height: 75vh;
+  margin: 0;
+  justify-content: flex-start;
+  align-content: flex-start;
+  justify-content: center;
+}
+
+.topitem {
+  position: relative;
+  flex-shrink: 2;
+  flex-grow: 4; /* default 0 */
+  flex-basis: auto; /* default auto */
+  align-self: center;
+  align-items: flex-start;
+}
+
+.buttontopcontainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+  height: 25vh;
+  margin: 0;
+  justify-content: center;
+}
+
+.testitem {
+  flex: 1;
+  background: #232323;
+}
+
+.middlecontainer {
+  display: flex;
+}
+
+.column1 {
+  flex: 1;
+  height: 100vh;
+  width: 48.6%;
+  background: #f2718a;
+}
+
+.column2 {
+  height: 100vh;
+  width: 48.6%;
+}
+
+/* for centering */
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+/* the Abigail McIntyre text at the top of the screen */
+#large-title {
+  position: absolute;
+  font-size: 10vw;
+  top: -10%;
+  /*font-size: 8rem;*/
+  color: #fcedd8;
+  font-family: Lovely Coffee;
+  text-shadow: 0.2vw 0.2vw 0vw #f2718a, 0.4vw 0.4vw 0vw #f69c94,
+    0.6vw 0.6vw 0vw #ffdb9f, 0.8vw 0.8vw 0vw #000000, 1vw 1vw 0vw #000000;
+}
+
+.abouttext {
+  position: absolute;
+  font-size: 12vw;
+  top: 120%;
+  left: 15%;
+  /*font-size: 8rem;*/
+  color: #fcedd8;
+  font-family: Lovely Coffee;
+
+  text-shadow: 0.2vw 0.2vw 0vw #f2718a, 0.4vw 0.4vw 0vw #f69c94,
+    0.6vw 0.6vw 0vw #ffdb9f, 0.8vw 0.8vw 0vw #c95375, 1vw 1vw 0vw #c95375;
+}
+
+/* to be able to auto scroll to this section */
+#about {
+}
+
+img {
+  overflow: hidden;
+  max-width: 100%;
+}
+
+img.align-self {
+  align-self: center;
+}
+
+#computerimage {
+  position: absolute;
+  top: 30%;
+  width: 30%;
+}
+
+div.scroll {
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: justify;
+}
+
+#myphoto {
+  position: absolute;
+  width: 260px;
+  left: 42.5%;
+  top: 115%;
+  height: auto;
+}
+
+/* button styling */
+/* the top buttons */
+.button-1 {
+  background: #f2718a;
+  color: #fff;
+  border: none;
+  height: 40px;
+  max-width: 120px;
+  font-size: 0.9em;
+  padding: 0 1.3em;
+  cursor: pointer;
+  transition: 800ms ease all;
+  outline: none;
+}
+.button-1:hover {
+  background: #232323;
+  color: #f2718a;
+}
+.button-1:before,
+button:after {
+  content: "";
+  top: 0;
+  right: 0;
+  height: 2px;
+  width: 0;
+  background: #f2718a;
+  transition: 400ms ease all;
+}
+.button-1:after {
+  right: inherit;
+  top: inherit;
+  left: 0;
+}
+.button-1:hover:before,
+button:hover:after {
+  width: 100%;
+  transition: 800ms ease all;
+}
+
+/* the middle buttons */
+.button-2 {
+  background: #f69c94;
+  color: #fff;
+  border: none;
+  height: 40px;
+  max-width: 120px;
+  font-size: 0.9em;
+  padding: 0 1.3em;
+  cursor: pointer;
+  transition: 800ms ease all;
+  outline: none;
+}
+.button-2:hover {
+  background: #f2718a;
+  color: #fff;
+}
+.button-2:before,
+button:after {
+  content: "";
+  top: 0;
+  right: 0;
+  height: 2px;
+  width: 0;
+  background: #f69c94;
+  transition: 400ms ease all;
+}
+.button-2:after {
+  right: inherit;
+  top: inherit;
+  left: 0;
+}
+.button-2:hover:before,
+button:hover:after {
+  width: 100%;
+  transition: 800ms ease all;
+}
+
+/* paragraph styling */
+.largefont {
+  font-size: 1.3vw;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1vw;
+}
+
+li {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1vw;
+}
+
+.artworktext {
+  position: relative;
+  font-size: 10vw;
+  color: #fcedd8;
+  font-family: Lovely Coffee;
+
+  text-shadow: 0.2vw 0.2vw 0vw #f2718a, 0.4vw 0.4vw 0vw #f69c94,
+    0.6vw 0.6vw 0vw #ffdb9f, 0.8vw 0.8vw 0vw #000000, 1vw 1vw 0vw #000000;
+}
+
+#artwork {
+}
+
+.grid {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.grid-item {
+  min-width: 250px;
+  max-width: 250px;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 250px;
+  flex: 1 1 250px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.wrapper {
+  min-height: 100vh;
+  padding: 2rem 0;
+  background: #232323;
+  color: #e4e4e8;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
+.grid-item figure {
+  padding: 0;
+  margin: 0;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.05);
+}
+
+.grid-item figure img {
+  display: block;
+  max-width: 100%;
+}
+.grid-item figcaption {
+  display: block;
+  padding: 0.625rem 0.5rem;
+  background: #232323;
+}
+
+#topBtn {
+  position: fixed;
+  bottom: 10px;
+  float: right;
+  right: 18.5%;
+  left: 85.25%;
+  max-width: 30px;
+  width: 100%;
+  font-size: 12px;
+  border-color: rgba(85, 85, 85, 0.2);
+  background-color: rgb(100, 100, 100);
+  padding: 0.5px;
+  border-radius: 4px;
+}
+/*On Hover Color Change*/
+#topBtn:hover {
+  background-color: #f69c94;
+}
